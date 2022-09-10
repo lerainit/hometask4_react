@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 
 const Navigation = (props) => {
-    const addCart = useSelector(store =>store.addCart.value)
+    const addCart = useSelector(store =>store.Cart.value)
     const addFavorites = useSelector(store =>store.addFavorites.value)
     const addCartLength = addCart.length
     const addFavoritesLength = addFavorites.length

@@ -57,12 +57,4 @@ fill={props.fill} stroke="none">
         )
     }
  export default Card; 
- //<button  className={styles.del_from_cart_btn} onClick = {() =>{
-                 
-                // props.setCartId(props.id)
-               //  props.openDeleteModal()}}>Delete from Cart</button>  
-                // const modal = useSelector(store => store.modal.value);
-   //const cardIndex = useSelector(store => store.cardIndex.value);
-  //  const modalText = useSelector(store => store.modalText.value);
-   // const buttonText = useSelector(store => store.buttonText.value);
-  // const addFavorites = useSelector(store =>store.addFavorites.value)
+ 

@@ -1,34 +1,43 @@
-import { addCart } from "./actions";
+import { addCart,deleteCard } from "./actions";
+
 
 
 const initialValue = {
     value:JSON.parse(localStorage.getItem('addCards')),
   }
   
-  const addCartReducer = (state = initialValue, action) => {
+  const CartReducer = (state = initialValue, action) => {
 
-
-
-
-
-    switch (action.type) {
+  switch (action.type) {
        
   
         case addCart: {
 
             let addCardsArr = state.value
 addCardsArr.push(action.payload.products[action.payload.index]) 
-console.log(addCardsArr)
+
 localStorage.setItem('addCards', JSON.stringify(addCardsArr))
 
 addCardsArr=JSON.parse(localStorage.getItem('addCards'))
           return { value:addCardsArr}
         }
-  
-        default: {
+        
+        case deleteCard:{
+
+          let addCardsArr = state.value
+          let newAddCardsArr = addCardsArr.filter((el, index) => action.payload.index !== index)
+
+          localStorage.setItem('addCards', JSON.stringify(newAddCardsArr))
+          addCardsArr=JSON.parse(localStorage.getItem('addCards'))
+          return { value:addCardsArr}
+
+        }
+
+      default: {
           return state;
         }
     }
+
   };
 
-  export default addCartReducer;
+  export default CartReducer;

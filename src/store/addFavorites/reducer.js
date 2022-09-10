@@ -17,12 +17,11 @@ if (action.payload.products[action.payload.index].addFavorites === false) {
     action.payload.products[action.payload.index].addFavorites = true
     addFavoritesArr.push(action.payload.products[action.payload.index])
 
-    console.log(addFavoritesArr)
     localStorage.setItem('products', JSON.stringify(action.payload.products))
     localStorage.setItem('addFavorites', JSON.stringify(addFavoritesArr))
 
   } else {
-      console.log(action.payload.index)
+  
     action.payload.products[action.payload.index].addFavorites = false
     let newAddFavoritesArr = addFavoritesArr.filter(({id}) => id !== action.payload.id)
  

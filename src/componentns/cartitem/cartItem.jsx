@@ -1,8 +1,11 @@
 import React from 'react'
 import styles from './cartItem.module.scss'
-
+import { useSelector,useDispatch } from 'react-redux';
 const CartItem = (props) => {
+    const dispatch = useDispatch();
 
+    const id = props.id
+    const index = props.index
 
     return (
         <>
@@ -16,9 +19,9 @@ const CartItem = (props) => {
 
 
                 <button className={styles.del_from_cart_btn} onClick={() => {
-
-                    props.setCartId(props.index)
-                    props.openDeleteModal()
+ dispatch({type:'openDeleteModal'})
+ dispatch({type:'SET_VALUE_MODAL',payload:'Do you want to add this product to cart'})
+ dispatch({type:'SET_VALUE_INDEX',payload:index})
                 }}>Delete from Cart</button>
             </ul>
 
@@ -29,4 +32,3 @@ const CartItem = (props) => {
 }
 export default CartItem;
 
-//<button  className={styles.deleteCart_btn} onClick = {() =>{props.deleteCartItem(props.id)}}>Delete item</button>

@@ -4,14 +4,14 @@ import FavoritesPage from './componentns/favoritespage/favorites';
 import CartPage from './componentns/cart/cart';
 import ProductPage from './componentns/productpage/productPage';
 
-const AppRoutes = ({deleteCartItem,products,openDeleteModal}) => {
+const AppRoutes = () => {
     return (
      
         <Routes>
-            <Route path='/' element={   <ProductPage products={products}  > </ProductPage>} />
+            <Route path='/' element={   <ProductPage  /> } />
            <Route path='/favorites' element={<FavoritesPage />} />
          
-           <Route path='/cart' element={<CartPage  deleteCartItem ={deleteCartItem} openDeleteModal={openDeleteModal}   />}/>
+           <Route path='/cart' element={<CartPage />}/>
          </Routes>
 
         
