@@ -5,7 +5,12 @@ import { shallowEqual } from 'react-redux'
 
 const FavoritesPage = () =>{
     const addFavorites = useSelector(store =>store.addFavorites.value,shallowEqual)
-
+    if(addFavorites.length === 0){
+        return(<>
+       <h1>No items have been added</h1> 
+        </>)
+    }
+    else{
 return(
   
  <>
@@ -15,7 +20,7 @@ return(
 </>   
     
 )
-
+    }
 
 }
 

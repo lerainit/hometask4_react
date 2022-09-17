@@ -6,7 +6,10 @@ import { shallowEqual } from 'react-redux'
 const CartPage = () =>{
 
     const addCart = useSelector(store =>store.Cart.value,shallowEqual)
-  
+    if(addCart.length === 0 ){
+        return(<> <h1>No items have been added</h1></>)
+    }
+    else{
 return(
 
 <>
@@ -16,7 +19,7 @@ return(
 </>
 
 )
-
+    }
 }
 export default CartPage
 
