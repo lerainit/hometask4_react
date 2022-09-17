@@ -1,8 +1,9 @@
-import React from 'react'
-import styles from './cartItem.module.scss'
+import React from 'react';
+import styles from './cartItem.module.scss';
 import { useDispatch } from 'react-redux';
 import { openDeleteModalAC } from '../../store/modal/actionCreators';
 import { modalTextAC } from '../../store/modalText/actionCreators';
+import PropTypes from 'prop-types'
 
 
 const CartItem = (props) => {
@@ -32,5 +33,24 @@ const CartItem = (props) => {
         </>
     )
 }
+CartItem.propTypes  = {
+    name:PropTypes.string,
+    price:PropTypes.number,
+    url:PropTypes.string,
+    art:PropTypes.number,
+    id:PropTypes.number,
+   
+    
+    }
+    CartItem.defaultProps ={
+    
+        name:'Product name',
+        price:0,
+        url:'',
+        art:0,
+        id:-1,
+        fill:'#fff'
+    
+    }
 export default CartItem;
 

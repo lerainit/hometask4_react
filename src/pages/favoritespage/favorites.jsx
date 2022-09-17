@@ -1,5 +1,5 @@
 import React from 'react'
-import FavItem from '../favitem/FavItem'
+import FavItem from '../../componentns/favitem/FavItem'
 import { useSelector } from 'react-redux'
 import { shallowEqual } from 'react-redux'
 

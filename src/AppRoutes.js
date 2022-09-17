@@ -1,8 +1,8 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import FavoritesPage from './componentns/favoritespage/favorites';
-import CartPage from './componentns/cart/cart';
-import ProductPage from './componentns/productpage/productPage';
+import FavoritesPage from './pages/favoritespage/favorites';
+import CartPage from './pages/cart/cart';
+import ProductPage from './pages/productpage/productPage';
 
 const AppRoutes = () => {
     return (

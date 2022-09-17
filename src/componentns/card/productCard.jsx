@@ -4,6 +4,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import { openModalAC } from '../../store/modal/actionCreators';
 import { modalTextAC } from '../../store/modalText/actionCreators';
 import { addFavoritesAC } from '../../store/addFavorites/actionCreator';
+import PropTypes from 'prop-types'
 
  const Card =(props) => {
  
@@ -58,5 +59,24 @@ fill={props.fill} stroke="none">
             </>
         )
     }
+    Card.propTypes  = {
+        name:PropTypes.string,
+        price:PropTypes.number,
+        url:PropTypes.string,
+        art:PropTypes.number,
+        id:PropTypes.number,
+        fill:PropTypes.string
+        
+        }
+        Card.defaultProps ={
+        
+            name:'Product name',
+            price:0,
+            url:'',
+            art:0,
+            id:-1,
+            fill:'#fff'
+        
+        }
  export default Card; 
  
