@@ -1,7 +1,9 @@
 import React  from 'react'
 import styles from './productCard.module.scss'
 import { useSelector,useDispatch } from 'react-redux';
-
+import { openModalAC } from '../../store/modal/actionCreators';
+import { modalTextAC } from '../../store/modalText/actionCreators';
+import { addFavoritesAC } from '../../store/addFavorites/actionCreator';
 
  const Card =(props) => {
  
@@ -21,7 +23,7 @@ return(
                 <li><span>Art:</span>{props.art}</li>
 
                 <svg onClick = {()=>{
-                    dispatch({type:'addFavorites',payload:{id:id,index:index,products:products}})
+                    dispatch(addFavoritesAC({id:id,index:index,products:products}))
                 dispatch({type:'setProducts'})}} version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="40.000000pt" height="26.000000pt" viewBox="0 0 1280.000000 1216.000000"
  preserveAspectRatio="xMidYMid meet">
@@ -44,8 +46,8 @@ fill={props.fill} stroke="none">
 </g>
 </svg>
  <button  className={styles.addCart_btn} onClick = {() =>{
-    dispatch({type:'openModal'})
-     dispatch({type:'SET_VALUE_MODAL',payload:'Do you want to add this product to cart'})
+    dispatch(openModalAC())
+     dispatch(modalTextAC('Do you want to add this product to cart'))
      dispatch({type:'SET_VALUE_INDEX',payload:index})}}>Add cart</button>
             
             

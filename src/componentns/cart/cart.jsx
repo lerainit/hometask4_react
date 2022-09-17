@@ -2,10 +2,11 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import CartItem from '../cartitem/cartItem'
+import { shallowEqual } from 'react-redux'
 
-const CartPage = (props) =>{
+const CartPage = () =>{
 
-    const addCart = useSelector(store =>store.Cart.value)
+    const addCart = useSelector(store =>store.Cart.value,shallowEqual)
     console.log(addCart)
 return(
 

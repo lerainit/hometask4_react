@@ -1,12 +1,13 @@
 import React from 'react'
 import Card from '../card/productCard'
 import { useSelector } from 'react-redux'
+import { shallowEqual } from 'react-redux'
 
 
 
 const ProductPage = () =>{
      
-const products = useSelector(store => store.products.value)
+const products = useSelector(store => store.products.value,shallowEqual)
 
 return(
 <>

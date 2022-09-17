@@ -13,14 +13,16 @@ const initialValue = {
   
         case addCart: {
 
-            let addCardsArr = state.value
-addCardsArr.push(action.payload.products[action.payload.index]) 
-
-localStorage.setItem('addCards', JSON.stringify(addCardsArr))
-
-addCardsArr=JSON.parse(localStorage.getItem('addCards'))
-          return { value:addCardsArr}
+          let addCardsArr = state.value
+          addCardsArr.push(action.payload.products[action.payload.index]) 
+          
+          localStorage.setItem('addCards', JSON.stringify(addCardsArr))
+          
+          addCardsArr=JSON.parse(localStorage.getItem('addCards'))
+                    return { value:addCardsArr}
+       
         }
+
         
         case deleteCard:{
 

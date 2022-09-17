@@ -4,7 +4,7 @@ import styles from './Navigation.module.scss'
 import { useSelector } from 'react-redux'
 
 
-const Navigation = (props) => {
+const Navigation = () => {
     const addCart = useSelector(store =>store.Cart.value)
     const addFavorites = useSelector(store =>store.addFavorites.value)
     const addCartLength = addCart.length
