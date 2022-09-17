@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-
 import CartItem from '../../componentns/cartitem/cartItem'
 import { shallowEqual } from 'react-redux'
 
@@ -16,16 +15,7 @@ return(
 
 </>
 
-
-
-
-
 )
-
-
-
-
-
 
 }
 export default CartPage

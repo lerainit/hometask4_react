@@ -8,16 +8,12 @@ const FavoritesPage = () =>{
 
 return(
   
-   
-    
-    <>
+ <>
 
 {addFavorites.map(({id,name,price,art,url},index) =><FavItem key={id}  id ={id}  name= {name} price ={price} fill={ '#FFFF00'}  art ={art} url={url} ></FavItem>)}
 
 </>   
     
-    
-   
 )
 
 
