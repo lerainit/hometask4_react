@@ -12,9 +12,9 @@ const DeleteModal = () => {
 
    const modalText = useSelector(store => store.modalText.value);
    const index = useSelector(store => store.cardIndex.value)
-   const addCart = useSelector(store => store.Cart.value)
+  
 
-   console.log(addCart)
+
    return (
 
 

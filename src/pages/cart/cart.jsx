@@ -6,7 +6,7 @@ import { shallowEqual } from 'react-redux'
 const CartPage = () =>{
 
     const addCart = useSelector(store =>store.Cart.value,shallowEqual)
-    console.log(addCart)
+  
 return(
 
 <>
